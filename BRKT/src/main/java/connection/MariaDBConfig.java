@@ -14,5 +14,6 @@ public class MariaDBConfig {
       dataSource.setUsername("JBT");
       dataSource.setPassword("X9E1!0*6x!lF");
       return dataSource;
+      //test comment
    }
 }
