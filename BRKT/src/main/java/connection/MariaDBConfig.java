@@ -11,8 +11,8 @@ public class MariaDBConfig {
       DriverManagerDataSource dataSource = new DriverManagerDataSource();
       dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
       dataSource.setUrl("jdbc:mariadb://localhost:3306/mydatabase");
-      dataSource.setUsername("myusername");
-      dataSource.setPassword("mypassword");
+      dataSource.setUsername("JBT");
+      dataSource.setPassword("X9E1!0*6x!lF");
       return dataSource;
    }
 }
