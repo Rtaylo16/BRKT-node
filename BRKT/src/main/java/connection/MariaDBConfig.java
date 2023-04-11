@@ -9,8 +9,8 @@ public class MariaDBConfig {
    @Bean
    public DataSource dataSource() {
 	   Connection connection = DriverManager.getConnection(
-			    "jdbc:mariadb://localhost:8081/database_name",
-			    "user", "password"
+			    "jdbc:mariadb://localhost:8081/local",
+			    "root", "999999999"
 			);
 	   connection.close();
    }
