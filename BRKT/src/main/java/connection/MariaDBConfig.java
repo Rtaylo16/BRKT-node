@@ -8,12 +8,10 @@ import org.springframework.context.annotation.Bean;
 public class MariaDBConfig {
    @Bean
    public DataSource dataSource() {
-      DriverManagerDataSource dataSource = new DriverManagerDataSource();
-      dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
-      dataSource.setUrl("jdbc:mariadb://localhost:3306/mydatabase");
-      dataSource.setUsername("JBT");
-      dataSource.setPassword("X9E1!0*6x!lF");
-      return dataSource;
-      //test comment
+	   Connection connection = DriverManager.getConnection(
+			    "jdbc:mariadb://localhost:3306/database_name",
+			    "user", "password"
+			);
+	   connection.close();
    }
 }
