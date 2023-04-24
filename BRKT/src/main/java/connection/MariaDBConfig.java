@@ -13,5 +13,25 @@ public class MariaDBConfig {
 			    "root", "999999999"
 			);
 	   connection.close();
+	   
+	   try (PreparedStatement statement = connection.prepareStatement("""
+		        INSERT INTO table_name(column1, column2)
+		        VALUES (?, ?)
+		      """)) {
+		    statement.setString(1, someString);
+		    statement.setInt(2, someInteger);
+		    int rowsInserted = statement.executeUpdate();
+		}
+	   try (PreparedStatement statement = connection.prepareStatement("""
+	            SELECT column1, column2
+	            FROM table_name
+	        """)) {
+	    ResultSet resultSet = statement.executeQuery();
+	    while (resultSet.next()) {
+	        String val1 = resultSet.getString(1); // by column index
+	        int val2 = resultSet.getInt("column2"); // by column name
+	        // ... use val1 and val2 ...
+	    }
+	}
    }
 }
