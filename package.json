@@ -1,0 +1,24 @@
+{
+  "name": "BRKT-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rtaylo16/BRKT-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rtaylo16/BRKT-node/issues"
+  },
+  "homepage": "https://github.com/Rtaylo16/BRKT-node#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "shopify-api-node": "^3.12.5"
+  }
+}
